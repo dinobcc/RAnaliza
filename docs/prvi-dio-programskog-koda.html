@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Prvi dio programskog koda | Uvod u primjenu GIS-a i programskog jezika R u prostornim analizama</title>
+  <meta name="description" content="Chapter 2 Prvi dio programskog koda | Uvod u primjenu GIS-a i programskog jezika R u prostornim analizama" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Prvi dio programskog koda | Uvod u primjenu GIS-a i programskog jezika R u prostornim analizama" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Prvi dio programskog koda | Uvod u primjenu GIS-a i programskog jezika R u prostornim analizama" />
+  
+  
+  
+
+<meta name="author" content="Dino Bečić, mag.geogr." />
+
+
+<meta name="date" content="2024-11-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="drugi-dio-programskog-koda.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">SHORT TITLE HERE</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Uvod</a></li>
+<li class="chapter" data-level="2" data-path="prvi-dio-programskog-koda.html"><a href="prvi-dio-programskog-koda.html"><i class="fa fa-check"></i><b>2</b> Prvi dio programskog koda</a></li>
+<li class="chapter" data-level="3" data-path="drugi-dio-programskog-koda.html"><a href="drugi-dio-programskog-koda.html"><i class="fa fa-check"></i><b>3</b> Drugi dio programskog koda</a></li>
+<li class="chapter" data-level="4" data-path="the-pool-of-tears.html"><a href="the-pool-of-tears.html"><i class="fa fa-check"></i><b>4</b> The pool of tears</a></li>
+<li class="chapter" data-level="5" data-path="a-caucus-race-and-a-long-tale.html"><a href="a-caucus-race-and-a-long-tale.html"><i class="fa fa-check"></i><b>5</b> A caucus-race and a long tale</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Uvod u primjenu GIS-a i programskog jezika R u prostornim analizama</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="prvi-dio-programskog-koda" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Prvi dio programskog koda<a href="prvi-dio-programskog-koda.html#prvi-dio-programskog-koda" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="prvi-dio-programskog-koda.html#cb2-1" tabindex="-1"></a><span class="co"># Učitavanje svih potrebnih biblioteka za ovaj projekt</span></span>
+<span id="cb2-2"><a href="prvi-dio-programskog-koda.html#cb2-2" tabindex="-1"></a><span class="fu">library</span>(sf)         <span class="co"># Biblioteka za rad s prostornim podacima (shapefiles, geometrija)</span></span></code></pre></div>
+<pre><code>## Warning: package &#39;sf&#39; was built under R version 4.3.3</code></pre>
+<pre><code>## Linking to GEOS 3.11.2, GDAL 3.8.2, PROJ 9.3.1; sf_use_s2() is TRUE</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="prvi-dio-programskog-koda.html#cb5-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)    <span class="co"># Biblioteka za naprednu vizualizaciju podataka</span></span></code></pre></div>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.3.3</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="prvi-dio-programskog-koda.html#cb7-1" tabindex="-1"></a><span class="fu">library</span>(dplyr)      <span class="co"># Biblioteka za manipulaciju i filtriranje podataka</span></span></code></pre></div>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 4.3.3</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="prvi-dio-programskog-koda.html#cb12-1" tabindex="-1"></a><span class="fu">library</span>(readxl)     <span class="co"># Biblioteka za čitanje podataka iz Excel datoteka</span></span></code></pre></div>
+<pre><code>## Warning: package &#39;readxl&#39; was built under R version 4.3.2</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="prvi-dio-programskog-koda.html#cb14-1" tabindex="-1"></a><span class="fu">library</span>(corrplot)   <span class="co"># Biblioteka za vizualizaciju korelacijskih matrica</span></span></code></pre></div>
+<pre><code>## Warning: package &#39;corrplot&#39; was built under R version 4.3.3</code></pre>
+<pre><code>## corrplot 0.95 loaded</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="prvi-dio-programskog-koda.html#cb17-1" tabindex="-1"></a><span class="fu">library</span>(spdep)      <span class="co"># Biblioteka za izračunih prostorne autokorelacije</span></span></code></pre></div>
+<pre><code>## Warning: package &#39;spdep&#39; was built under R version 4.3.3</code></pre>
+<pre><code>## Loading required package: spData</code></pre>
+<pre><code>## Warning: package &#39;spData&#39; was built under R version 4.3.3</code></pre>
+<pre><code>## To access larger datasets in this package, install the spDataLarge
+## package with: `install.packages(&#39;spDataLarge&#39;,
+## repos=&#39;https://nowosad.github.io/drat/&#39;, type=&#39;source&#39;)`</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="prvi-dio-programskog-koda.html#cb22-1" tabindex="-1"></a><span class="co"># Postavljanje radnog direktorija</span></span>
+<span id="cb22-2"><a href="prvi-dio-programskog-koda.html#cb22-2" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;C:/Users/dbecic/OneDrive - Grad Zagreb/Desktop/R Projects/RAnaliza/Data&quot;</span>)</span>
+<span id="cb22-3"><a href="prvi-dio-programskog-koda.html#cb22-3" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="prvi-dio-programskog-koda.html#cb22-4" tabindex="-1"></a><span class="co"># Dohvaćanje popisa svih .shp datoteka u radnom direktoriju</span></span>
+<span id="cb22-5"><a href="prvi-dio-programskog-koda.html#cb22-5" tabindex="-1"></a>shp_files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">pattern =</span> <span class="st">&quot;</span><span class="sc">\\</span><span class="st">.shp$&quot;</span>)  <span class="co"># Pretražuje datoteke koje završavaju na .shp</span></span>
+<span id="cb22-6"><a href="prvi-dio-programskog-koda.html#cb22-6" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="prvi-dio-programskog-koda.html#cb22-7" tabindex="-1"></a><span class="co"># Iteracija kroz sve pronađene shapefile datoteke</span></span>
+<span id="cb22-8"><a href="prvi-dio-programskog-koda.html#cb22-8" tabindex="-1"></a><span class="cf">for</span> (file <span class="cf">in</span> shp_files) {</span>
+<span id="cb22-9"><a href="prvi-dio-programskog-koda.html#cb22-9" tabindex="-1"></a>  object_name <span class="ot">&lt;-</span> tools<span class="sc">::</span><span class="fu">file_path_sans_ext</span>(file)  <span class="co"># Uklanja ekstenziju</span></span>
+<span id="cb22-10"><a href="prvi-dio-programskog-koda.html#cb22-10" tabindex="-1"></a>  <span class="fu">assign</span>(object_name, <span class="fu">st_read</span>(file))             <span class="co"># Dinamičko učitavanje shapefile-a</span></span>
+<span id="cb22-11"><a href="prvi-dio-programskog-koda.html#cb22-11" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## Reading layer `Bus&#39; from data source 
+##   `C:\Users\dbecic\OneDrive - Grad Zagreb\Desktop\R Projects\RAnaliza\Data\Bus.shp&#39; 
+##   using driver `ESRI Shapefile&#39;
+## Simple feature collection with 1875 features and 1 field
+## Geometry type: POINT
+## Dimension:     XY
+## Bounding box:  xmin: 444204.4 ymin: 5053858 xmax: 478993.9 ymax: 5088970
+## Projected CRS: HTRS96 / Croatia TM
+## Reading layer `Katastar&#39; from data source 
+##   `C:\Users\dbecic\OneDrive - Grad Zagreb\Desktop\R Projects\RAnaliza\Data\Katastar.shp&#39; 
+##   using driver `ESRI Shapefile&#39;
+## Simple feature collection with 33 features and 5 fields
+## Geometry type: POLYGON
+## Dimension:     XY
+## Bounding box:  xmin: 447310.4 ymin: 5058613 xmax: 479770.8 ymax: 5088960
+## Projected CRS: HTRS96 / Croatia TM
+## Reading layer `Ljekarna&#39; from data source 
+##   `C:\Users\dbecic\OneDrive - Grad Zagreb\Desktop\R Projects\RAnaliza\Data\Ljekarna.shp&#39; 
+##   using driver `ESRI Shapefile&#39;
+## Simple feature collection with 245 features and 3 fields
+## Geometry type: POINT
+## Dimension:     XY
+## Bounding box:  xmin: 448365.7 ymin: 5058255 xmax: 475382.1 ymax: 5085627
+## Projected CRS: HTRS96 / Croatia TM
+## Reading layer `Skola&#39; from data source 
+##   `C:\Users\dbecic\OneDrive - Grad Zagreb\Desktop\R Projects\RAnaliza\Data\Skola.shp&#39; 
+##   using driver `ESRI Shapefile&#39;
+## Simple feature collection with 177 features and 5 fields
+## Geometry type: POINT
+## Dimension:     XY
+## Bounding box:  xmin: 446863.2 ymin: 5058245 xmax: 475496 ymax: 5088670
+## Projected CRS: HTRS96 / Croatia TM
+## Reading layer `Tramvaj&#39; from data source 
+##   `C:\Users\dbecic\OneDrive - Grad Zagreb\Desktop\R Projects\RAnaliza\Data\Tramvaj.shp&#39; 
+##   using driver `ESRI Shapefile&#39;
+## Simple feature collection with 260 features and 2 fields
+## Geometry type: POINT
+## Dimension:     XY
+## Bounding box:  xmin: 452779.2 ymin: 5070942 xmax: 467198.9 ymax: 5080219
+## Projected CRS: HTRS96 / Croatia TM
+## Reading layer `Vrtic&#39; from data source 
+##   `C:\Users\dbecic\OneDrive - Grad Zagreb\Desktop\R Projects\RAnaliza\Data\Vrtic.shp&#39; 
+##   using driver `ESRI Shapefile&#39;
+## Simple feature collection with 329 features and 6 fields
+## Geometry type: POINT
+## Dimension:     XY
+## Bounding box:  xmin: 448757.4 ymin: 5058059 xmax: 475318.9 ymax: 5085856
+## Projected CRS: HTRS96 / Croatia TM</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="prvi-dio-programskog-koda.html#cb24-1" tabindex="-1"></a><span class="co"># Prikaz podataka</span></span>
+<span id="cb24-2"><a href="prvi-dio-programskog-koda.html#cb24-2" tabindex="-1"></a><span class="fu">summary</span>(Katastar)  <span class="co"># Prikazuje osnovne informacije o shapefile objektu (zamijenite &#39;Katastar&#39;)</span></span></code></pre></div>
+<pre><code>##     OBJECTID       KO_NAZIV           SHAPE_Leng      SHAPE_Area      
+##  Min.   : 1.00   Length:33          Min.   : 7540   Min.   : 2730871  
+##  1st Qu.:13.00   Class :character   1st Qu.:14963   1st Qu.: 7133608  
+##  Median :29.00   Mode  :character   Median :18051   Median : 8660181  
+##  Mean   :28.42                      Mean   :20283   Mean   :12265300  
+##  3rd Qu.:43.00                      3rd Qu.:25139   3rd Qu.:14825456  
+##  Max.   :56.00                      Max.   :39142   Max.   :37871238  
+##       KEY              geometry 
+##  Min.   : 1   POLYGON      :33  
+##  1st Qu.: 9   epsg:3765    : 0  
+##  Median :17   +proj=tmer...: 0  
+##  Mean   :17                     
+##  3rd Qu.:25                     
+##  Max.   :33</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="prvi-dio-programskog-koda.html#cb26-1" tabindex="-1"></a><span class="co"># 3. Vizualizacija prostornih podataka</span></span>
+<span id="cb26-2"><a href="prvi-dio-programskog-koda.html#cb26-2" tabindex="-1"></a><span class="co"># plot() prikazuje geometriju prostornih slojeva koristeći osnovne alate u R-u</span></span>
+<span id="cb26-3"><a href="prvi-dio-programskog-koda.html#cb26-3" tabindex="-1"></a><span class="co"># &quot;geometry&quot; je Kljuc stupca u sf objektu koji sadrži informacije o geometriji</span></span>
+<span id="cb26-4"><a href="prvi-dio-programskog-koda.html#cb26-4" tabindex="-1"></a><span class="fu">plot</span>(Katastar[<span class="st">&quot;geometry&quot;</span>], <span class="at">main =</span> <span class="st">&quot;KO_Kljuc&quot;</span>)  <span class="co"># Dodaje naslov grafu koristeći main = &quot;Naslov&quot;</span></span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/Kod_1-1.png" width="672" /></p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="prvi-dio-programskog-koda.html#cb27-1" tabindex="-1"></a><span class="co"># 4. Učitavanje statističkih podataka iz Excel datoteke</span></span>
+<span id="cb27-2"><a href="prvi-dio-programskog-koda.html#cb27-2" tabindex="-1"></a><span class="co"># Definira Kljuc Excel datoteke koja sadrži dodatne informacije o nekretninama</span></span>
+<span id="cb27-3"><a href="prvi-dio-programskog-koda.html#cb27-3" tabindex="-1"></a>excel_data <span class="ot">&lt;-</span> <span class="st">&quot;Nekretnine_Izvjesce.xlsx&quot;</span></span>
+<span id="cb27-4"><a href="prvi-dio-programskog-koda.html#cb27-4" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="prvi-dio-programskog-koda.html#cb27-5" tabindex="-1"></a><span class="co"># Koristi funkciju read_excel() za učitavanje podataka iz Excel datoteke u tablični format</span></span>
+<span id="cb27-6"><a href="prvi-dio-programskog-koda.html#cb27-6" tabindex="-1"></a>Nektretnine <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(excel_data)</span>
+<span id="cb27-7"><a href="prvi-dio-programskog-koda.html#cb27-7" tabindex="-1"></a></span>
+<span id="cb27-8"><a href="prvi-dio-programskog-koda.html#cb27-8" tabindex="-1"></a></span>
+<span id="cb27-9"><a href="prvi-dio-programskog-koda.html#cb27-9" tabindex="-1"></a><span class="co"># 5. Spajanje prostornih podataka s tabličnim podacima</span></span>
+<span id="cb27-10"><a href="prvi-dio-programskog-koda.html#cb27-10" tabindex="-1"></a><span class="co"># Funkcija left_join() spaja dva podatkovna okvira na temelju zajedničkog atributa</span></span>
+<span id="cb27-11"><a href="prvi-dio-programskog-koda.html#cb27-11" tabindex="-1"></a><span class="co"># &quot;KEY&quot; je zajednički ključ koji povezuje podatke iz Excel datoteke i shapefile-a</span></span>
+<span id="cb27-12"><a href="prvi-dio-programskog-koda.html#cb27-12" tabindex="-1"></a>Katastar <span class="ot">&lt;-</span> Katastar <span class="sc">%&gt;%</span></span>
+<span id="cb27-13"><a href="prvi-dio-programskog-koda.html#cb27-13" tabindex="-1"></a>  <span class="fu">left_join</span>(Nektretnine, <span class="at">by =</span> <span class="st">&quot;KEY&quot;</span>)</span>
+<span id="cb27-14"><a href="prvi-dio-programskog-koda.html#cb27-14" tabindex="-1"></a></span>
+<span id="cb27-15"><a href="prvi-dio-programskog-koda.html#cb27-15" tabindex="-1"></a></span>
+<span id="cb27-16"><a href="prvi-dio-programskog-koda.html#cb27-16" tabindex="-1"></a><span class="co"># 6. Računanje broja objekata u katastarskim općinama</span></span>
+<span id="cb27-17"><a href="prvi-dio-programskog-koda.html#cb27-17" tabindex="-1"></a><span class="co"># Dodaje nove stupce u podatke koji broje objekte unutar svake katastarske općine</span></span>
+<span id="cb27-18"><a href="prvi-dio-programskog-koda.html#cb27-18" tabindex="-1"></a>Katastar <span class="ot">&lt;-</span> Katastar <span class="sc">%&gt;%</span></span>
+<span id="cb27-19"><a href="prvi-dio-programskog-koda.html#cb27-19" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb27-20"><a href="prvi-dio-programskog-koda.html#cb27-20" tabindex="-1"></a>    <span class="co"># Koristi funkciju st_intersects() za identifikaciju presjeka geometrija</span></span>
+<span id="cb27-21"><a href="prvi-dio-programskog-koda.html#cb27-21" tabindex="-1"></a>    <span class="co"># lengths() računa broj objekata koji se nalaze unutar svake općine</span></span>
+<span id="cb27-22"><a href="prvi-dio-programskog-koda.html#cb27-22" tabindex="-1"></a>    <span class="at">Count_Bus =</span> <span class="fu">lengths</span>(<span class="fu">st_intersects</span>(Katastar, Bus)),         <span class="co"># Broji autobuse</span></span>
+<span id="cb27-23"><a href="prvi-dio-programskog-koda.html#cb27-23" tabindex="-1"></a>    <span class="at">Count_Ljekarna =</span> <span class="fu">lengths</span>(<span class="fu">st_intersects</span>(Katastar, Ljekarna)), <span class="co"># Broji ljekarne</span></span>
+<span id="cb27-24"><a href="prvi-dio-programskog-koda.html#cb27-24" tabindex="-1"></a>    <span class="at">Count_Skola =</span> <span class="fu">lengths</span>(<span class="fu">st_intersects</span>(Katastar, Skola)),     <span class="co"># Broji škole</span></span>
+<span id="cb27-25"><a href="prvi-dio-programskog-koda.html#cb27-25" tabindex="-1"></a>    <span class="at">Count_Tramvaj =</span> <span class="fu">lengths</span>(<span class="fu">st_intersects</span>(Katastar, Tramvaj)), <span class="co"># Broji tramvaje</span></span>
+<span id="cb27-26"><a href="prvi-dio-programskog-koda.html#cb27-26" tabindex="-1"></a>    <span class="at">Count_Vrtic =</span> <span class="fu">lengths</span>(<span class="fu">st_intersects</span>(Katastar, Vrtic))      <span class="co"># Broji vrtiće</span></span>
+<span id="cb27-27"><a href="prvi-dio-programskog-koda.html#cb27-27" tabindex="-1"></a>  )</span>
+<span id="cb27-28"><a href="prvi-dio-programskog-koda.html#cb27-28" tabindex="-1"></a></span>
+<span id="cb27-29"><a href="prvi-dio-programskog-koda.html#cb27-29" tabindex="-1"></a></span>
+<span id="cb27-30"><a href="prvi-dio-programskog-koda.html#cb27-30" tabindex="-1"></a><span class="co"># 7. Osnovna vizualizacija broja autobusa po katastarskim jedinicama</span></span>
+<span id="cb27-31"><a href="prvi-dio-programskog-koda.html#cb27-31" tabindex="-1"></a><span class="co"># Koristi ggplot2 za vizualizaciju prostornih podataka</span></span>
+<span id="cb27-32"><a href="prvi-dio-programskog-koda.html#cb27-32" tabindex="-1"></a><span class="fu">ggplot</span>(Katastar) <span class="sc">+</span></span>
+<span id="cb27-33"><a href="prvi-dio-programskog-koda.html#cb27-33" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> Count_Bus)) <span class="sc">+</span>                 <span class="co"># Boji prostorne jedinice prema broju autobusa</span></span>
+<span id="cb27-34"><a href="prvi-dio-programskog-koda.html#cb27-34" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span>                                <span class="co"># Primjenjuje minimalistički stil grafa</span></span>
+<span id="cb27-35"><a href="prvi-dio-programskog-koda.html#cb27-35" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Broj Autobusa po Katastarskoj jedinici&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;Autobusi&quot;</span>)  <span class="co"># Dodaje naslov i legendu</span></span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/Kod_1-2.png" width="672" /></p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="prvi-dio-programskog-koda.html#cb28-1" tabindex="-1"></a><span class="co"># 8. Vizualizacija s prilagođenim gradijentom boja</span></span>
+<span id="cb28-2"><a href="prvi-dio-programskog-koda.html#cb28-2" tabindex="-1"></a><span class="co"># Dodaje gradijent boja od crvene (malo autobusa) do tamnoplave (mnogo autobusa)</span></span>
+<span id="cb28-3"><a href="prvi-dio-programskog-koda.html#cb28-3" tabindex="-1"></a><span class="fu">ggplot</span>(Katastar) <span class="sc">+</span></span>
+<span id="cb28-4"><a href="prvi-dio-programskog-koda.html#cb28-4" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> Count_Bus)) <span class="sc">+</span>                 </span>
+<span id="cb28-5"><a href="prvi-dio-programskog-koda.html#cb28-5" tabindex="-1"></a>  <span class="fu">scale_fill_gradient</span>(<span class="at">low =</span> <span class="st">&quot;red&quot;</span>, <span class="at">high =</span> <span class="st">&quot;darkblue&quot;</span>) <span class="sc">+</span></span>
+<span id="cb28-6"><a href="prvi-dio-programskog-koda.html#cb28-6" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb28-7"><a href="prvi-dio-programskog-koda.html#cb28-7" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb28-8"><a href="prvi-dio-programskog-koda.html#cb28-8" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Broj Autobusa po Katastarskoj jedinici&quot;</span>,</span>
+<span id="cb28-9"><a href="prvi-dio-programskog-koda.html#cb28-9" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">&quot;Autobusi&quot;</span></span>
+<span id="cb28-10"><a href="prvi-dio-programskog-koda.html#cb28-10" tabindex="-1"></a>  )</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/Kod_1-3.png" width="672" /></p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="prvi-dio-programskog-koda.html#cb29-1" tabindex="-1"></a><span class="co"># Linearni model je jednostavna metoda koja koristi jednu varijablu, poput vremena, za predviđanje trenda</span></span>
+<span id="cb29-2"><a href="prvi-dio-programskog-koda.html#cb29-2" tabindex="-1"></a><span class="co"># Linearni model za projekciju cijena</span></span>
+<span id="cb29-3"><a href="prvi-dio-programskog-koda.html#cb29-3" tabindex="-1"></a><span class="co"># Cilj: Predviđanje buduće cijene na temelju prošlih cijena.</span></span>
+<span id="cb29-4"><a href="prvi-dio-programskog-koda.html#cb29-4" tabindex="-1"></a><span class="co"># Ulazne varijable: Samo godine (2021, 2022, 2023).</span></span>
+<span id="cb29-5"><a href="prvi-dio-programskog-koda.html#cb29-5" tabindex="-1"></a><span class="co"># Rezultat: Model daje cijenu za 2024. na temelju povijesnog trenda.</span></span>
+<span id="cb29-6"><a href="prvi-dio-programskog-koda.html#cb29-6" tabindex="-1"></a><span class="co"># Ograničenje: Gleda samo prošle godine i ignorira druge faktore (npr. škole, tramvaje, vrtiće).</span></span>
+<span id="cb29-7"><a href="prvi-dio-programskog-koda.html#cb29-7" tabindex="-1"></a></span>
+<span id="cb29-8"><a href="prvi-dio-programskog-koda.html#cb29-8" tabindex="-1"></a><span class="co"># 9. Projekcija cijena za 2024. godinu</span></span>
+<span id="cb29-9"><a href="prvi-dio-programskog-koda.html#cb29-9" tabindex="-1"></a><span class="co"># Dodaje novi stupac koji predviđa cijene nekretnina za 2024. godinu koristeći linearni model</span></span>
+<span id="cb29-10"><a href="prvi-dio-programskog-koda.html#cb29-10" tabindex="-1"></a>Katastar <span class="ot">&lt;-</span> Katastar <span class="sc">%&gt;%</span></span>
+<span id="cb29-11"><a href="prvi-dio-programskog-koda.html#cb29-11" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span>  <span class="co"># Omogućuje da se operacije izvode red po red</span></span>
+<span id="cb29-12"><a href="prvi-dio-programskog-koda.html#cb29-12" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb29-13"><a href="prvi-dio-programskog-koda.html#cb29-13" tabindex="-1"></a>    <span class="at">MEDIJALNA_CIJENA_EUR_24 =</span> {</span>
+<span id="cb29-14"><a href="prvi-dio-programskog-koda.html#cb29-14" tabindex="-1"></a>      <span class="co"># Definira ulazne podatke za regresijski model (godine i cijene)</span></span>
+<span id="cb29-15"><a href="prvi-dio-programskog-koda.html#cb29-15" tabindex="-1"></a>      years <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2021</span>, <span class="dv">2022</span>, <span class="dv">2023</span>)</span>
+<span id="cb29-16"><a href="prvi-dio-programskog-koda.html#cb29-16" tabindex="-1"></a>      prices <span class="ot">&lt;-</span> <span class="fu">c</span>(MEDIJALNA_CIJENA_EUR_21, MEDIJALNA_CIJENA_EUR_22, MEDIJALNA_CIJENA_EUR_23)</span>
+<span id="cb29-17"><a href="prvi-dio-programskog-koda.html#cb29-17" tabindex="-1"></a>      </span>
+<span id="cb29-18"><a href="prvi-dio-programskog-koda.html#cb29-18" tabindex="-1"></a>      <span class="co"># Kreira linearni model koji predviđa cijenu na temelju godina</span></span>
+<span id="cb29-19"><a href="prvi-dio-programskog-koda.html#cb29-19" tabindex="-1"></a>      fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(prices <span class="sc">~</span> years)</span>
+<span id="cb29-20"><a href="prvi-dio-programskog-koda.html#cb29-20" tabindex="-1"></a>      </span>
+<span id="cb29-21"><a href="prvi-dio-programskog-koda.html#cb29-21" tabindex="-1"></a>      <span class="co"># Predviđa cijenu za 2024. godinu</span></span>
+<span id="cb29-22"><a href="prvi-dio-programskog-koda.html#cb29-22" tabindex="-1"></a>      <span class="fu">predict</span>(fit, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">years =</span> <span class="dv">2024</span>))</span>
+<span id="cb29-23"><a href="prvi-dio-programskog-koda.html#cb29-23" tabindex="-1"></a>    }</span>
+<span id="cb29-24"><a href="prvi-dio-programskog-koda.html#cb29-24" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb29-25"><a href="prvi-dio-programskog-koda.html#cb29-25" tabindex="-1"></a>  <span class="fu">ungroup</span>()  <span class="co"># Uklanja redno grupiranje</span></span></code></pre></div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="drugi-dio-programskog-koda.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/edit/main/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/blob/main/index.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
