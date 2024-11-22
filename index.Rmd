@@ -14,7 +14,7 @@ output:
 
 <div style="text-align:justify;">
 
-Ova analiza i materijali predstavljeni su sklopu dvodnevne radionice "Uvod u primjenu GIS-a i programskog jezika R u prostornim analizama", u organizaciji Hrvatskog statističkog društva i Kluba R. Radionica je osmišljena kako bi sudionike upoznala s osnovama GIS-a i vrstama prostornih podataka, te ih potom uvela u naprednije eksplorativne analize prostornih podataka.
+Analiza i materijali predstavljeni su sklopu dvodnevne radionice "Uvod u primjenu GIS-a i programskog jezika R u prostornim analizama", u organizaciji Hrvatskog statističkog društva i Kluba R. Radionica je osmišljena kako bi sudionike upoznala s osnovama GIS-a i vrstama prostornih podataka, te ih potom uvela u naprednije eksplorativne analize prostornih podataka.
 
 Cilj ove bookdown knjige je pružiti resurse za proširivanje znanja u području prostorne analitike, kombinirajući temeljne koncepte GIS-a i napredne tehnike prostorne analize u R-u. 
 
