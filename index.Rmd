@@ -20,7 +20,7 @@ Cilj ove bookdown knjige je pružiti resurse za proširivanje znanja u području
 
 Knjiga služi kao nadopuna sadržaju radionice, sa specifičnim naglaskom na:
 
-    Osnovne znanja o GIS-u i strukturama prostornih podataka,
+    Osnovna znanja o GIS-u i strukturama prostornih podataka,
     Primjene prostornih analiza,
     Integraciju naprednih analiza u R-u kroz praktične primjere.
 
