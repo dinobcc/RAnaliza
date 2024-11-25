@@ -26,9 +26,30 @@ Knjiga služi kao nadopuna sadržaju radionice, sa specifičnim naglaskom na:
 
 Knjiga je koncipirana kao izvor informacija koji će se kontinuirano nadopunjavati, nudeći  korisnicima temeljno znanje o GIS-u, ali i vodiče koji im mogu poslužiti kao uvod u napredne prostorne analize.
 
+Prva verzija knjige objavljenja je 22.11.2024.
+
 </div>
 
-# Prvi dio programskog koda
+
+# Osnove GIS-a
+
+<div style="text-align:justify;">
+
+Ovaj dio je predviđen za osnove GIS-a.
+
+</div>
+
+# Prostorne analize u R-u
+
+## Uvod u ESDA
+
+<div style="text-align:justify;">
+
+Dio predviđen za osnove prostornih analiza u R-u, i ESDA analize.
+
+</div>
+
+## Uvoz podataka
 
 ```{r Kod_1, include=TRUE}
 # Učitavanje svih potrebnih biblioteka za ovaj projekt
@@ -137,7 +158,7 @@ Katastar <- Katastar %>%
 ```
 
 
-# Drugi dio programskog koda
+## Analize
 
 ```{r Kod_2, include=TRUE}
 # 10. Deskriptivna statistika prosječnih cijena
@@ -692,3 +713,18 @@ ggplot(Katastar_Analitika) +
   theme_minimal()  # Minimalistički stil vizualizacije
 ```
 
+
+
+# Autor
+
+<div style="text-align:justify;">
+
+Dino se specijalizirao za korištenje GIS-a (geografskih informacijskih sustava) i programskog jezika R u naprednim prostornim analizama. Njegov rad uključuje analizu prostornih obrazaca i modeliranje prostornih podataka kako bi se bolje razumjeli i analizirali prostorni procesi. Izlagao je na više domaćih i međunarodnih konferencija, uključujući naslove predavanja kao što su:
+
+    The Role and Use of Big Data in Spatial Analysis of Touristification: Example of the Historic Core of Dubrovnik,
+    Spatial Patterns and Housing Inequalities – An Exploratory Analysis in the City of Zagreb,
+    Application of Spatial Autocorrelation in the Analysis of Fertility Distribution in Croatia
+
+Kao vanjski suradnik na Fakultetu Hrvatskih studija, na Odsjeku za demografiju i hrvatsko iseljeništvo, sudjeluje u nastavi na četiri kolegija, uključujući i kolegij “Računalni programi u demografiji”, gdje naglasak stavlja na primjenu R-a u demografskim istraživanjima. Trenutno je doktorand na Prirodoslovno-matematičkom fakultetu, na geografskom odsjeku na doktorskom studiju “Prostor, regija, okoliš, pejzaž”, s istraživačkim fokusom na napredne prostorne analize u procesu turistifikacije.
+
+</div>

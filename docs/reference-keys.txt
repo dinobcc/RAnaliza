@@ -1,0 +1,7 @@
+uvod
+osnove-gis-a
+prostorne-analize-u-r-u
+uvod-u-esda
+uvoz-podataka
+analize
+autor
