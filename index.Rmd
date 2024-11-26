@@ -89,20 +89,20 @@ for (file in shp_files) {
   assign(object_name, st_read(file))             # Dinamičko učitavanje shapefile-a
 }
 
+# Učitavanje statističkih podataka iz Excel datoteke
+# Definira Kljuc Excel datoteke koja sadrži dodatne informacije o nekretninama
+excel_data <- "Nekretnine_Izvjesce.xlsx"
+
+# Koristi funkciju read_excel() za učitavanje podataka iz Excel datoteke u tablični format
+Nektretnine <- read_excel(excel_data)
+
 # Prikaz podataka
 summary(Katastar)  # Prikazuje osnovne informacije o shapefile objektu (zamijenite 'Katastar')
 
 # Vizualizacija prostornih podataka
 # plot() prikazuje geometriju prostornih slojeva koristeći osnovne alate u R-u
 # "geometry" je Kljuc stupca u sf objektu koji sadrži informacije o geometriji
-plot(Katastar["geometry"], main = "KO_Kljuc")  # Dodaje naslov grafu koristeći main = "Naslov"
-
-# 4. Učitavanje statističkih podataka iz Excel datoteke
-# Definira Kljuc Excel datoteke koja sadrži dodatne informacije o nekretninama
-excel_data <- "Nekretnine_Izvjesce.xlsx"
-
-# Koristi funkciju read_excel() za učitavanje podataka iz Excel datoteke u tablični format
-Nektretnine <- read_excel(excel_data)
+plot(Katastar["geometry"], main = "KO")  # Dodaje naslov grafu koristeći main = "Naslov"
 ```
 
 
