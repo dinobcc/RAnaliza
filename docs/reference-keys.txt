@@ -5,3 +5,6 @@ uvod-u-esda
 uvoz-podataka
 analize
 autor
+radni-projekt
+analize-1
+analize-2

@@ -4,9 +4,11 @@ author: "Dino Bečić, mag.geogr."
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output:
-  html_document:
-    toc: true
-    toc_depth: 2
+  bookdown::gitbook:
+    config:
+      toc:
+        collapse: false
+        depth: 3
     number_sections: true
 ---
 
@@ -49,9 +51,24 @@ Dio predviđen za osnove prostornih analiza u R-u, i ESDA analize.
 
 </div>
 
-## Uvoz podataka
+## Radni projekt
 
-```{r Kod_1, include=TRUE}
+<div style="text-align:justify;">
+
+Dio predviđen za opis radnog zadatka.
+
+</div>
+
+
+### Uvoz podataka
+
+<div style="text-align:justify;">
+
+Prvo se učitavaju potrebne programske biblioteke koje omogućuju rad s prostornim podacima, vizualizaciju i analizu, te manipulaciju podacima. Zatim se postavlja radni direktorij u kojem se nalaze svi podaci za analizu. Kod pretražuje sve datoteke u tom direktoriju koje imaju format prostorne datoteke (.shp). Svaka pronađena datoteka automatski se učitava i pretvara u R objekt s odgovarajućim imenom, što omogućuje njihovu daljnju analizu. Na kraju, daje se pregled osnovnih informacija o jednom od tih objekata kako bi se dobila bolja slika o sadržaju podataka.
+
+</div>
+
+```{r Uvoz, include=TRUE}
 # Učitavanje svih potrebnih biblioteka za ovaj projekt
 library(sf)         # Biblioteka za rad s prostornim podacima (shapefiles, geometrija)
 library(ggplot2)    # Biblioteka za naprednu vizualizaciju podataka
@@ -75,11 +92,10 @@ for (file in shp_files) {
 # Prikaz podataka
 summary(Katastar)  # Prikazuje osnovne informacije o shapefile objektu (zamijenite 'Katastar')
 
-# 3. Vizualizacija prostornih podataka
+# Vizualizacija prostornih podataka
 # plot() prikazuje geometriju prostornih slojeva koristeći osnovne alate u R-u
 # "geometry" je Kljuc stupca u sf objektu koji sadrži informacije o geometriji
 plot(Katastar["geometry"], main = "KO_Kljuc")  # Dodaje naslov grafu koristeći main = "Naslov"
-
 
 # 4. Učitavanje statističkih podataka iz Excel datoteke
 # Definira Kljuc Excel datoteke koja sadrži dodatne informacije o nekretninama
@@ -87,8 +103,12 @@ excel_data <- "Nekretnine_Izvjesce.xlsx"
 
 # Koristi funkciju read_excel() za učitavanje podataka iz Excel datoteke u tablični format
 Nektretnine <- read_excel(excel_data)
+```
 
 
+### Analize 1
+
+```{r Kod_1, include=TRUE}
 # 5. Spajanje prostornih podataka s tabličnim podacima
 # Funkcija left_join() spaja dva podatkovna okvira na temelju zajedničkog atributa
 # "KEY" je zajednički ključ koji povezuje podatke iz Excel datoteke i shapefile-a
@@ -158,7 +178,7 @@ Katastar <- Katastar %>%
 ```
 
 
-## Analize
+### Analize 2
 
 ```{r Kod_2, include=TRUE}
 # 10. Deskriptivna statistika prosječnih cijena
